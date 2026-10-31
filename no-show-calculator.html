@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>No-show cost calculator — how much empty slots cost you — OpsPick</title>
+<meta name="description" content="Work out what no-shows and late cancellations cost your service business per month and per year, and what a deposit policy would recover.">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"No-show cost calculator","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/">OpsPick</a>
+  <nav><a href="/#guides">Guides</a><a href="/tools.html">Tools</a><a href="/about.html">About</a></nav>
+</div></header>
+<main class="wrap article">
+  <p class="tag">Free tool</p>
+  <h1>What no-shows cost you</h1>
+  <p class="lede">Enter four numbers from your calendar. The calculator shows what empty slots cost per month and per year, and what a deposit policy typically recovers.</p>
+
+  <div class="calc">
+    <div class="calc-grid">
+      <label>Appointments per week<input id="appts" type="number" value="40" min="1" step="1"></label>
+      <label>Average ticket ($)<input id="ticket" type="number" value="45" min="1" step="1"></label>
+      <label>No-show + late cancel rate (%)<input id="rate" type="number" value="8" min="0" max="60" step="0.5"></label>
+      <label>Recoverable share with deposits (%)<input id="recover" type="number" value="50" min="0" max="100" step="5"></label>
+    </div>
+
+    <div class="calc-out">
+      <div class="box"><div class="k">Lost per month</div><div class="v" id="month">—</div></div>
+      <div class="box"><div class="k">Lost per year</div><div class="v" id="year">—</div></div>
+      <div class="box"><div class="k">Recoverable per year</div><div class="v" id="rec">—</div></div>
+      <div class="box"><div class="k">Empty slots per month</div><div class="v" id="slots">—</div></div>
+    </div>
+
+    <p class="calc-note" id="note"></p>
+  </div>
+
+  <h2>How the numbers work</h2>
+  <p>Empty slots per month = appointments per week × 4.33 × no-show rate. Lost revenue multiplies that by your average ticket. The recoverable figure is the share of those slots a deposit plus two-step reminders usually brings back — the conservative default is half, which is what most shops see in the first month after turning deposits on.</p>
+
+  <p>If the annual number is uncomfortable, that is the point. Most owners guess "a few hundred a year" and the calendar says otherwise.</p>
+
+  <aside class="promo">
+    <p class="promo-kicker">Toolkit</p>
+    <h3>The policy and the messages, ready to paste</h3>
+    <p>Salon Policy Pack: three deposit policies with booking-page and charge wording, plus five recovery messages and a voicemail script. Twenty minutes to install.</p>
+    <a class="promo-btn" href="https://ubadici.gumroad.com/l/lslrsq" rel="sponsored noopener" target="_blank">Get the pack — $9</a>
+    <p style="margin:14px 0 0;font-size:.86rem">Want the intake form, pricing calculator and software checklist too? <a href="https://ubadici.gumroad.com/l/iaesu" rel="sponsored noopener" target="_blank">Starter Kit — $39</a></p>
+  </aside>
+
+  <footer><p><a href="/">Back to guides</a> · <a href="/articles/reduce-no-shows-automated-reminders.html">How to cut no-shows</a></p></footer>
+</main>
+
+<style>
+  .calc{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:22px;box-shadow:var(--shadow);margin:26px 0}
+  .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .calc-grid label{display:block;font-size:.82rem;color:var(--muted);letter-spacing:.02em}
+  .calc-grid input{width:100%;margin-top:6px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font-size:1rem;background:var(--bg);color:var(--ink)}
+  .calc-out{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+  .calc-out .box{background:var(--accent-soft);border-radius:12px;padding:16px}
+  .calc-out .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+  .calc-out .v{font-size:1.7rem;font-weight:650;letter-spacing:-.02em;margin-top:4px}
+  .calc-note{font-size:.86rem;color:var(--muted);margin:14px 0 0}
+  @media (max-width:560px){.calc-grid,.calc-out{grid-template-columns:1fr}}
+</style>
+
+<script>
+const ids = ['appts','ticket','rate','recover'];
+const n = (id) => parseFloat(document.getElementById(id).value) || 0;
+const money = (v) => '$' + Math.round(v).toLocaleString('en-US');
+
+function calc(){
+  const appts = n('appts'), ticket = n('ticket'), rate = n('rate')/100, rec = n('recover')/100;
+  const perMonth = appts * 4.33;
+  const lostSlots = perMonth * rate;
+  const lostMonth = lostSlots * ticket;
+  const lostYear = lostMonth * 12;
+  document.getElementById('month').textContent = money(lostMonth);
+  document.getElementById('year').textContent = money(lostYear);
+  document.getElementById('rec').textContent = money(lostYear * rec);
+  document.getElementById('slots').textContent = lostSlots.toFixed(1);
+  document.getElementById('note').textContent =
+    `${perMonth.toFixed(0)} appointments a month · ${lostSlots.toFixed(1)} of them go empty · ${money(lostMonth)} lost monthly`;
+}
+ids.forEach(id => document.getElementById(id).addEventListener('input', calc));
+calc();
+</script>
+</body>
+</html>
