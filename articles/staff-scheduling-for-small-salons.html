@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scheduling 2–5 staff without double-booking — OpsPick</title>
+<meta name="description" content="A practical scheduling model for small salons and clinics with two to five staff: capacity maths, resource calendars, overlap rules and the settings that stop double-bookings.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/">OpsPick</a>
+  <nav><a href="/">Guides</a><a href="/about.html">About</a></nav>
+</div></header>
+<main class="wrap article">
+  <p class="tag">Operations</p><p class="tag">Updated Oct 2026</p>
+  <h1>Scheduling two to five staff without double-booking</h1>
+  <p class="lede">Double-bookings are rarely a software failure. They are the visible symptom of a schedule that only exists in three people's heads.</p>
+
+  <h2>Why it happens at this size</h2>
+  <p>With one person, the calendar is a diary. With two, it becomes a negotiation. With four or five, it becomes a forecasting problem that nobody was trained for, and the tools usually get blamed for it.</p>
+  <p>The same four causes show up again and again. A service's duration in the software does not match reality, so a 45-minute appointment runs to 70 and pushes into the next one. Two staff share a chair, a room or a steamer without either calendar knowing. Someone takes a booking by phone while looking at yesterday's printout. And processing time — colour developing, a mask, a patch test — is either counted twice or not counted at all.</p>
+  <p>Fix those four and most overlaps disappear without changing platforms.</p>
+
+  <h2>Do the capacity maths before the software</h2>
+  <p>You cannot schedule what you have not counted. Take one normal week and write down, per staff member, the hours actually available for clients — not hours at work. Subtract breaks, cleaning, admin, and the gap after a long service that never gets filled.</p>
+  <table>
+    <tr><th>Resource</th><th>Count it as</th><th>Common mistake</th></tr>
+    <tr><td>Stylist / therapist</td><td>One calendar each</td><td>Sharing a login</td></tr>
+    <tr><td>Chair or room</td><td>One calendar each, if shared</td><td>Assuming staff = space</td></tr>
+    <tr><td>Equipment (steamer, lamp, X-ray)</td><td>Bookable resource</td><td>Ignoring it until it conflicts</td></tr>
+    <tr><td>Processing time</td><td>Blocked on the staff calendar</td><td>Leaving the chair "free"</td></tr>
+  </table>
+  <p>If two stylists share three chairs, the chairs are the constraint, not the people. Schedules built on staff calendars alone will keep accepting bookings the room cannot hold.</p>
+
+  <h2>One calendar per thing that can only be in one place</h2>
+  <p>Every resource that cannot be duplicated needs its own axis: each person, each shared room, each machine. In most booking tools this means creating the room as a "resource" or "station" and attaching services to it, not just to a staff member. If the tool cannot do resources, it can still work — but only if the desk treats the chair as the unit of booking and assigns staff afterwards.</p>
+  <p>This is the single change that removes the "two clients, one room" class of error. Everything else is discipline.</p>
+
+  <h3>Settings worth checking in any tool</h3>
+  <p><a href="{AFF_BOOKSY}">Booksy</a>, <a href="{AFF_FRESHA}">Fresha</a> and <a href="{AFF_SQUARE}">Square Appointments</a> all support per-staff calendars, service durations and buffers; resource or station booking is handled differently in each, so check current pricing and the feature list for your plan before choosing. Whatever you use, verify four settings on day one: staff-specific availability, buffer per service, a booking cutoff, and whether online booking can override a manual block. The last one causes more overlaps than any other single toggle.</p>
+
+  <h2>Rules that prevent overlaps</h2>
+  <ul>
+    <li><strong>Buffer after every service.</strong> Ten minutes minimum, fifteen after colour or anything with cleanup. Set it in the service, not in the staff member's head.</li>
+    <li><strong>Real durations.</strong> Use the median of your last twenty appointments, not the optimistic number from the price list.</li>
+    <li><strong>One booking channel.</strong> Phone, DM, walk-in and online all land in the same calendar, entered by whoever took the request, at the moment they take it.</li>
+    <li><strong>No verbal holds.</strong> If it is not in the calendar with a name, it does not exist.</li>
+    <li><strong>Turn off "any available staff" for services that need a specific skill.</strong> It is the fastest route to booking a junior on a colour correction.</li>
+    <li><strong>Close the book before the last appointment, not after.</strong> The final slot should account for closing duties you actually do.</li>
+  </ul>
+
+  <h3>What the front desk needs on one screen</h3>
+  <p>Whoever answers the phone needs today and the next seven days, per staff member, including buffers and blocks, in one view. If they have to open three tabs to answer "can Tuesdays at four work for both of you", they will guess, and guessing is how double-bookings get created. Day view for the current day, week view for everything else, colour-coded by resource rather than by service type.</p>
+
+  <h2>Handling shared clients and processing time</h2>
+  <p>Two-person services — a colourist and a stylist, a therapist and an assistant — break naive calendars because the client occupies one chair while two people's time is consumed unevenly. The workable pattern is to book the client against the lead practitioner for the full duration, then block the second person's time as a separate internal appointment on their calendar. That way both calendars are honest, and neither double-books while the client is "only" processing.</p>
+  <p>Processing time on a single-practitioner service should be blocked too. The chair is occupied, even if the person is not working. If your tool offers "processing time" as a separate field, use it; if not, a second internal block on the same calendar achieves the same result.</p>
+
+  <div class="disclosure"><p>Some links on this page are affiliate links. If you sign up through one, OpsPick may earn a commission at no extra cost to you. This does not influence which tools we cover or how we describe their limits.</p></div>
+
+  <footer><p><a href="/">Back to guides</a> · <a href="/articles/booksy-vs-fresha-vs-square-appointments.html">Booksy vs Fresha vs Square Appointments</a> · <a href="/articles/reduce-no-shows-automated-reminders.html">How to cut no-shows with automated reminders</a></p></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waitlists that actually fill cancelled slots — OpsPick</title>
+<meta name="description" content="Why most salon waitlists sit unused, a three-part structure that fills last-minute gaps, and the automation rules that stop one slot being promised to two people.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/">OpsPick</a>
+  <nav><a href="/">Guides</a><a href="/about.html">About</a></nav>
+</div></header>
+<main class="wrap article">
+  <p class="tag">Operations</p><p class="tag">Updated Oct 2026</p>
+  <h1>Waitlists that actually fill cancelled slots</h1>
+  <p class="lede">A waitlist is not a list. It is a queue with a deadline, and if the deadline is missing, nothing happens.</p>
+
+  <h2>Why the usual waitlist fails</h2>
+  <p>The typical version is a notebook, or a "notes" field in the client record, holding names with no preference for day, time or service. When a slot opens, nobody knows who to call, so nobody calls. The list grows, the slots stay empty, and after a few months the staff stop writing names down.</p>
+  <p>Three things are usually missing. The entry does not say what the client would actually accept. There is no trigger that fires when a slot appears. And there is no rule for who gets it, so the first person to answer wins by luck rather than by fit.</p>
+  <p>Fix those and a waitlist becomes the cheapest capacity tool you own — it converts demand you already have into slots you already paid for.</p>
+
+  <h2>The three parts that matter</h2>
+  <h3>1. A specific request, not a wish</h3>
+  <p>Capture three fields at minimum: the service, the acceptable window, and how much notice they need. "Any Saturday, mornings, can come in with two hours' notice" is usable. "Whenever you have something" is not — it puts the matching work back on your desk, which is the failure you were trying to avoid.</p>
+  <h3>2. A trigger tied to the slot, not to a person</h3>
+  <p>The message should fire when a slot is released: a cancellation, a moved appointment, an added shift. Not when someone remembers to check the book. If your tool cannot trigger on a cancellation, the manual version is a single daily task at a fixed time — better than nothing, but it will miss same-day gaps, which are the ones worth filling.</p>
+  <h3>3. A rule for who gets it</h3>
+  <p>Broadcast to everyone matching, first reply wins, and say so in the message. Sequential calling — one person at a time, waiting for an answer — is more polite and much slower; it usually loses the slot. Broadcast with an explicit "first reply" line is faster and, provided you close the loop, feels fair.</p>
+
+  <h2>What the message should say</h2>
+  <p>Short, specific, and time-stamped. The difference between a message that fills a slot and one that gets ignored is usually the amount of thinking it demands:</p>
+  <table>
+    <tr><th>Weak</th><th>Workable</th></tr>
+    <tr><td>"We have availability this week!"</td><td>"Saturday 10:00, balayage, 2.5 hours — first reply gets it."</td></tr>
+    <tr><td>"A slot opened up, let us know."</td><td>"Today 15:30, cut and blow-dry. Reply YES and it's yours until 14:00."</td></tr>
+    <tr><td>Long message with the full price list</td><td>Service, time, duration, one action, one deadline</td></tr>
+  </table>
+  <p>Send it from a name, not the brand. And do not attach an offer — a discount on top of a freed slot trains clients to wait for cancellations instead of booking.</p>
+
+  <h2>The automation rules</h2>
+  <p><a href="{AFF_BOOKSY}">Booksy</a>, <a href="{AFF_FRESHA}">Fresha</a> and <a href="{AFF_SQUARE}">Square Appointments</a> each offer some form of waitlist or "notify me" list, with different degrees of automation; check current pricing and whether the notification fires on cancellation or only on request. Whichever you use, these five rules cover most of the edge cases:</p>
+  <ol>
+    <li><strong>Match on service and window.</strong> Do not message a client who wants Saturdays about a Tuesday morning.</li>
+    <li><strong>Respect the entry's expiry.</strong> A request for "this week" should drop out by itself; stale entries are why lists rot.</li>
+    <li><strong>Hold the slot for the first reply for a fixed time</strong> — ten or fifteen minutes — then release it to the next in line if the reply does not turn into a booking.</li>
+    <li><strong>Cap messages per client per month.</strong> Two or three is enough. More and they mute you, which also kills your reminders.</li>
+    <li><strong>Confirm back immediately.</strong> "You're booked for Saturday 10:00" ends the race; silence invites a second client to arrive for the same slot.</li>
+  </ol>
+
+  <h3>The double-booking risk nobody plans for</h3>
+  <p>Broadcast waitlists create a race. If two clients reply within a minute and both get a friendly "great, see you then", you have promised one chair twice. The fix is procedural: only one message may confirm, and it must come from the calendar, not from a person replying in a chat thread. If the desk handles it manually, the rule is that the booking is entered first and the confirmation sent second — never the other way round.</p>
+
+  <h2>When a waitlist is the wrong tool</h2>
+  <p>If your problem is that Tuesday afternoons are permanently empty, a waitlist will not help; nobody is waiting for Tuesday. That is a pricing or marketing problem. Waitlists fill gaps in demand that already exists. They are also poor for services that need preparation — mixed colour, ordered stock, a guest practitioner — because a two-hour notice is not enough time to be ready.</p>
+
+  <h3>What to measure</h3>
+  <p>Track fill rate (slots offered versus slots filled), median time to fill, and how many waitlist entries convert within thirty days. If the fill rate is low, your windows are too narrow. If entries never convert, the messages are going out too late or to the wrong people. Both are fixable without changing platforms.</p>
+
+  <div class="disclosure"><p>Some links on this page are affiliate links. If you sign up through one, OpsPick may earn a commission at no extra cost to you. We recommend tools by fit, and commission has no bearing on what we write about their waitlist features.</p></div>
+
+  <footer><p><a href="/">Back to guides</a> · <a href="/articles/handle-late-cancellations.html">Late cancellations: policy and scripts</a> · <a href="/articles/sms-vs-whatsapp-reminders.html">SMS vs WhatsApp reminders</a></p></footer>
+</main>
+</body>
+</html>

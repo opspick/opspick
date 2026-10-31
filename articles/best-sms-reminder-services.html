@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SMS reminder services compared on cost and reliability - OpsPick</title>
+<meta name="description" content="How to compare SMS appointment reminder providers on real cost per delivered message, delivery receipts, retries and compliance, without being misled by headline pricing.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/">OpsPick</a>
+  <nav><a href="/">Guides</a><a href="/about.html">About</a></nav>
+</div></header>
+<main class="wrap article">
+  <p class="tag">Messaging</p><p class="tag">Updated Oct 2026</p>
+  <h1>SMS reminder services compared on cost and reliability</h1>
+  <p class="lede">Almost every provider advertises a low per-message rate. Almost none of them advertise what happens when a message fails, or how much of your monthly bill is a floor rather than usage.</p>
+
+  <h2>What "reliable" actually means</h2>
+  <p>Reliability in SMS is not uptime on a status page. It is a set of behaviours you can test before you buy, and most of them are invisible in a pricing table.</p>
+  <ul>
+    <li><strong>Delivery receipts.</strong> A provider that reports "sent" but not "delivered" is telling you it handed the message to a carrier, not that a phone received it. Without receipts you cannot tell a bad number from a bad route.</li>
+    <li><strong>Automatic retry.</strong> Carriers drop messages. A good provider retries once or twice before giving up, and tells you it did.</li>
+    <li><strong>Opt-out handling.</strong> A proper implementation recognises STOP, STOPALL, and UNSUBSCRIBE, suppresses the number, and confirms the opt-out back to the client.</li>
+    <li><strong>Sender identity.</strong> In the US and Canada this means a registered 10DLC brand and campaign, or a toll-free number with verification. Unregistered traffic gets filtered, and filtered messages look exactly like delivered ones on your dashboard.</li>
+    <li><strong>Segment accounting.</strong> One long reminder becomes two or three billable messages. Providers that hide segmentation in the fine print are not lying, but they are not helping either.</li>
+  </ul>
+
+  <h2>The providers people actually use</h2>
+  <p>There is no single best provider, because the right answer depends on whether you want a booking system that sends texts or a texting tool that sits next to your calendar. The table groups them by that question rather than by feature count.</p>
+  <table>
+    <tr><th>Provider</th><th>Best for</th><th>Pricing model</th><th>Watch out for</th></tr>
+    <tr><td>Booking platform built-ins (Booksy, Fresha, Square Appointments)</td><td>Businesses that want reminders included in the calendar they already use</td><td>Usually bundled with a plan or a per-message add-on</td><td>Little control over wording and timing; check current pricing per plan</td></tr>
+    <tr><td>Twilio</td><td>Anyone with a developer, or a no-code automation tool</td><td>Pay per message plus carrier fees, billed monthly</td><td>You build the reminder logic yourself, including retries and opt-outs</td></tr>
+    <tr><td>Textline</td><td>Small teams that want a shared inbox and texting from a real number</td><td>Per-seat subscription with a message allowance</td><td>Allowance overage rates; check current pricing before you scale</td></tr>
+    <tr><td>SimpleTexting</td><td>Campaigns plus reminders from one dashboard</td><td>Monthly plan with included messages, higher tiers for volume</td><td>Autopilot features are tiered; the cheap tier is thinner than the demo</td></tr>
+    <tr><td>Podium</td><td>Reviews, webchat and reminders in one place</td><td>Quote-based, usually annual</td><td>Cost is high relative to a pure reminder tool; ask for the cancellation terms</td></tr>
+  </table>
+  <p>Two of the platforms above, <a href="{AFF_BOOKSY}">Booksy</a> and <a href="{AFF_FRESHA}">Fresha</a>, include reminders on most plans. <a href="{AFF_SQUARE}">Square Appointments</a> bundles them with its free tier, which makes it the cheapest place to test whether reminders move your no-show rate at all.</p>
+
+  <h2>The cost traps</h2>
+  <p>Headline pricing is usually the least useful number on the page. These four decide what you actually pay.</p>
+  <ul>
+    <li><strong>Platform fee versus usage.</strong> Many "cheap per message" providers charge a monthly minimum that you pay whether you send 40 texts or 400. Divide the minimum by your real monthly volume before comparing.</li>
+    <li><strong>Segments, not messages.</strong> A 200-character reminder with a name, a time, an address, and a reschedule link will often bill as two segments. Shorten the message before you blame the provider.</li>
+    <li><strong>Inbound messages.</strong> Confirmations and reschedule requests are inbound. Some plans count them, some charge extra, some include them. Ask directly.</li>
+    <li><strong>Number registration.</strong> US and Canadian 10DLC registration carries one-off and sometimes recurring carrier fees that are separate from your subscription.</li>
+  </ul>
+
+  <h2>How to test before you commit</h2>
+  <ol>
+    <li>Send the exact reminder you plan to use, with a real client name, to five phones on three different carriers.</li>
+    <li>Check the delivery receipt timestamp, not just the status. A receipt that arrives six hours later is a receipt you cannot act on.</li>
+    <li>Reply STOP from one phone and confirm the number is suppressed, and that no further messages arrive.</li>
+    <li>Send a message at your real sending time, which for most businesses is early evening. Route quality varies by hour.</li>
+    <li>Run it for two weeks and count confirmed appointments, not delivered messages.</li>
+  </ol>
+
+  <h2>The boring recommendation</h2>
+  <p>Use the reminders inside the booking tool you already pay for until you can show that wording or timing is costing you appointments. Then move to a dedicated provider, keep the message under 160 characters, register your sender properly, and track one number: confirmations per hundred reminders sent. Cost per delivered message is a procurement metric. Confirmations per hundred is the business metric, and it is the only one that survives a price increase.</p>
+  <p>If you have not settled the channel question yet, <a href="/articles/sms-vs-whatsapp-reminders.html">SMS vs WhatsApp reminders</a> covers where each one fails. For the sequence itself, see <a href="/articles/reduce-no-shows-automated-reminders.html">cutting no-shows with automated reminders</a>.</p>
+
+  <div class="disclosure">Some links on this page are affiliate links. If you sign up through one, OpsPick may earn a commission at no extra cost to you. Providers are listed because they are commonly used, not because of what they pay. Prices change often - check current pricing on each provider's site before you decide.</div>
+
+  <footer><p><a href="/">Back to guides</a> &middot; <a href="/articles/sms-vs-whatsapp-reminders.html">SMS vs WhatsApp reminders</a></p></footer>
+</main>
+</body>
+</html>
