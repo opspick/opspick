@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Booking software migration checklist — OpsPick</title>
+<meta name="description" content="A step-by-step checklist for moving to new booking software: what to export, how to handle future appointments, deposits and gift cards, and how to avoid double bookings on switch day.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/">OpsPick</a>
+  <nav><a href="/">Guides</a><a href="/about.html">About</a></nav>
+</div></header>
+<main class="wrap article">
+  <p class="tag">Operations</p><p class="tag">Updated Oct 2026</p>
+  <h1>Booking software migration checklist</h1>
+  <p class="lede">A migration fails quietly, not loudly. The new system works, the old link still gets traffic, and three weeks later a client arrives for an appointment that exists in neither calendar.</p>
+
+  <h2>Two weeks out: inventory what you are moving</h2>
+  <p>Before touching the new system, list everything the old one holds. Not just the client names — the things that are easy to forget and expensive to lose.</p>
+  <table>
+    <tr><th>Item</th><th>Why it matters</th><th>Format to request</th></tr>
+    <tr><td>Client records</td><td>Notes, allergies, formulas, preferences</td><td>CSV with all custom fields, not just contact details</td></tr>
+    <tr><td>Future appointments</td><td>Anything booked after switch day</td><td>Date, time, service, staff, client, deposit status</td></tr>
+    <tr><td>Deposits and prepayments</td><td>Money already taken for future visits</td><td>Balance report; decide whether to honour in the new system</td></tr>
+    <tr><td>Gift cards and packages</td><td>Outstanding liability you still owe</td><td>Code, remaining value, expiry</td></tr>
+    <tr><td>Service menu and prices</td><td>Rebuilding these is slower than it looks</td><td>Export or screenshot every variant</td></tr>
+    <tr><td>Staff, hours and time off</td><td>Drives availability and payroll</td><td>Per-person rota for the next eight weeks</td></tr>
+    <tr><td>Message templates</td><td>Wording you have already refined</td><td>Copy the text into a document</td></tr>
+  </table>
+  <p>Ask for the export in writing and check it opens. A file that arrives as a PDF is not an export; it is a picture of your data.</p>
+
+  <h2>One week out: rebuild, then verify</h2>
+  <ol>
+    <li><strong>Recreate the structure.</strong> Services, durations, buffers, staff, rooms, opening hours, holidays. Do this before importing clients, or the import will fail on unmatched fields.</li>
+    <li><strong>Import a small batch first.</strong> Fifty clients is enough to expose broken phone formats, duplicated records and lost notes. Fix the mapping, then import the rest.</li>
+    <li><strong>Set up money.</strong> Deposits, cancellation fees, tax, tipping and payouts. Test one charge and one refund end to end.</li>
+    <li><strong>Recreate the messages.</strong> Reminder timings, confirmation text, and the opt-out wording. Send each one to your own phone.</li>
+    <li><strong>Move future appointments.</strong> Enter them manually if the import cannot preserve staff and service together. For a busy week that is a few hours; for a broken import it is a month of complaints.</li>
+    <li><strong>Check the public booking page.</strong> Book from a phone on mobile data. Confirm the confirmation email and the calendar invite both arrive.</li>
+  </ol>
+
+  <h2>Switch day: run both systems, briefly</h2>
+  <p>Keep the old system readable for two to four weeks. Not writable — readable. You need it to answer "when was her last colour" and to check whether a deposit was taken. Cancel the subscription only after that window closes.</p>
+  <p>On the day itself, do four things in this order:</p>
+  <ul>
+    <li>Put a redirect or a clear notice on the old booking link. Do not leave a working form that writes to a calendar nobody checks.</li>
+    <li>Update every place the link appears: website, Google Business Profile, Instagram bio, email signature, printed cards, review replies.</li>
+    <li>Tell staff where to look and who to ask. One named person for the first week beats a group chat.</li>
+    <li>Print the day's appointments. A piece of paper is a legitimate fallback for the first morning.</li>
+  </ul>
+  <p>The most common switch-day failure is not data loss. It is two live booking links, both accepting appointments, only one of which anyone reads.</p>
+
+  <h2>First week: watch these five things</h2>
+  <p>Check them daily rather than waiting for the month-end report.</p>
+  <ol>
+    <li><strong>Double bookings.</strong> Look for two clients in one slot, especially where a buffer used to absorb overruns.</li>
+    <li><strong>Missing reminders.</strong> Compare sent messages against the day's appointments. A wrong sender ID can get messages filtered silently.</li>
+    <li><strong>Deposits that did not attach.</strong> Any appointment that should have a card on file and does not.</li>
+    <li><strong>Duplicate clients.</strong> The same person imported twice, with history split across two records.</li>
+    <li><strong>Staff workarounds.</strong> If someone is keeping a paper list "just in case", find out why. That is your real bug report.</li>
+  </ol>
+
+  <h2>Thirty days later: close the loop</h2>
+  <p>Reconcile the first month's payments against payouts, confirm that gift cards and prepaid packages were honoured, and export the client list from the new system once. If that export is incomplete, you have found the problem while you still have leverage.</p>
+  <p>Then write down what you would do differently. The next migration — a second location, a new platform, a sale — will be easier for it. If you are moving from paper rather than another platform, <a href="/articles/migrate-from-pen-and-paper.html">migrating from pen and paper</a> covers the parts that do not apply here, and <a href="/articles/client-intake-forms.html">client intake forms</a> is worth rebuilding at the same time rather than importing as-is.</p>
+  <p>Most switches land on <a href="{AFF_SQUARE}">Square Appointments</a>, <a href="{AFF_BOOKSY}">Booksy</a> or <a href="{AFF_FRESHA}">Fresha</a>; check current import support and pricing before you pick a switch date.</p>
+
+  <div class="disclosure">Some links on this page are affiliate links. If you sign up through one, OpsPick may earn a commission at no extra cost to you. Import tools, plan limits and export formats vary by provider and change over time — check current details before you schedule a switch.</div>
+
+  <footer><p><a href="/">Back to guides</a> &middot; <a href="/articles/migrate-from-pen-and-paper.html">Migrating from pen and paper</a></p></footer>
+</main>
+</body>
+</html>
