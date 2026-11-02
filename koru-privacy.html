@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Koru — Gizlilik Politikası</title>
+<title>Koru — Gizlilik Politikası | OpsPick</title>
 <meta name="description" content="Koru uygulamasının gizlilik politikası: hangi veriler işlenir, nerede saklanır, nasıl silinir.">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -13,43 +13,42 @@
   <nav><a href="/tr/">Türkçe</a><a href="/">English</a></nav>
 </div></header>
 <main class="wrap article">
-  <p class="tag">Koru</p>
-  <h1>Gizlilik Politikası</h1>
-  <p class="lede">Son güncelleme: 2 Kasım 2026. Bu politika, Koru uygulamasının hangi verileri işlediğini açıklar.</p>
+  <p class="tag">Koru · Gizlilik</p>
+  <h1>Koru Gizlilik Politikası</h1>
+  <p class="lede">Son güncelleme: 2 Kasım 2026. Bu politika, Koru mobil uygulamasının hangi verileri işlediğini ve senin neyi kontrol edebildiğini açıklar.</p>
 
-  <h2>1. İşlenen veriler</h2>
+  <h2>1. Hangi veriler işlenir</h2>
   <ul>
     <li><strong>Hesap bilgileri:</strong> e-posta adresi ve şifre özeti (hash). Şifrenin kendisi saklanmaz.</li>
-    <li><strong>Uygulama içi notlar:</strong> isteğe bağlı olarak yazdığın tetikleyici notları ve günlük kontroller.</li>
-    <li><strong>Koruma durumu:</strong> filtrenin açık/kapalı olması ve son güncelleme zamanı.</li>
+    <li><strong>Uygulama içi notlar:</strong> tetikleyici notları ve isteğe bağlı günlük kontrol kayıtları.</li>
+    <li><strong>Teknik veriler:</strong> uygulama sürümü ve engelli liste sürümü. Hata ayıklama için sınırlı teknik loglar.</li>
   </ul>
-  <p>Engellediğin veya ziyaret ettiğin sitelerin listesi toplanmaz. Gezinme geçmişi okunmaz, saklanmaz, paylaşılmaz.</p>
 
-  <h2>2. Verilerin kullanımı</h2>
-  <p>Veriler yalnızca uygulamanın çalışması için kullanılır: oturum açma, ayarlarının cihazlar arasında tutarlı olması ve iyileşme takibinin gösterilmesi. Reklam profili oluşturulmaz, üçüncü taraflara satılmaz.</p>
+  <h2>2. İşlenmeyen veriler</h2>
+  <p>Koru ziyaret ettiğin sitelerin içeriğini okumaz, tarama geçmişini toplamaz, konum, kişi listesi veya reklam kimliği istemez. Reklam ağı ve üçüncü taraf izleme yoktur.</p>
 
-  <h2>3. Engelli alan adı listesi</h2>
-  <p>Uygulama, kumar ve bahis alan adlarını içeren bir listeyi sunucudan indirir. Bu indirme sırasında yalnızca liste sürümü ve bütünlük kontrolü için gereken teknik bilgiler iletilir; kimliğine bağlanan bir kayıt tutulmaz.</p>
+  <h2>3. DNS filtresi ve veri akışı</h2>
+  <p>Filtre cihazında yerel olarak çalışır. Engelli liste cihaza indirilir ve bütünlük kontrolünden geçirilir. Hangi alan adını çözmeye çalıştığın sunucuya gönderilmez; engelleme kararı cihazda verilir.</p>
 
-  <h2>4. Yerel işleme</h2>
-  <p>DNS filtresi cihazında çalışır. Filtreleme kararları cihazda alınır; hangi alan adının engellendiği sunucuya gönderilmez.</p>
+  <h2>4. Sunucuda saklananlar</h2>
+  <p>Hesap e-postası, şifre özeti ve uygulama içi notlar; veritabanında şifreli bağlantı üzerinden erişilen bir PostgreSQL sunucusunda tutulur. Yedekler şifrelenir.</p>
 
-  <h2>5. Saklama ve silme</h2>
-  <p>Hesap verileri, hesabın açık olduğu sürece saklanır. Uygulama içindeki hesap silme işlemiyle birlikte e-posta, notlar ve koruma durumu kalıcı olarak silinir. Silme talebini e-posta ile de iletebilirsin.</p>
+  <h2>5. Saklama süresi ve silme</h2>
+  <p>Hesabını uygulama içinden silebilirsin. Silme talebinde hesap verileri ve notlar en geç 30 gün içinde kalıcı olarak silinir. Yasal saklama yükümlülüğü olan kayıtlar (varsa) bu sürenin dışındadır.</p>
 
-  <h2>6. Güvenlik</h2>
-  <p>Aktarım TLS ile şifrelenir. Şifreler yalnızca özet (hash) olarak saklanır. Yetkisiz erişimi önlemek için erişim yetkileri en aza indirilir.</p>
+  <h2>6. Paylaşım</h2>
+  <p>Verilerin üçüncü kişilerle satılmaz, reklam amacıyla paylaşılmaz. Yalnızca yasal bir talep karşısında, talep edilen kapsamla sınırlı olarak paylaşılabilir.</p>
 
   <h2>7. Çocuklar</h2>
-  <p>Uygulama 18 yaş ve üzeri kullanıcılar için tasarlanmıştır. 18 yaş altındaki kişilerden bilerek veri toplanmaz.</p>
+  <p>Koru 18 yaş ve üzeri kullanıcılar için tasarlanmıştır. 18 yaş altı kullanıcılardan bilerek veri toplanmaz.</p>
 
   <h2>8. Sağlık uyarısı</h2>
-  <p>Koru bir tıbbi tedavi veya terapi yerine geçmez. Kumar bağımlılığı ciddi bir sağlık sorunudur; destek için yerel profesyonel hizmetlere başvurman önerilir.</p>
+  <p>Koru bir tıbbi tedavi veya terapi hizmeti değildir. Kumar bağımlılığı ciddi bir sağlık sorunudur; destek almak için yerel profesyonel hizmetlere başvurman önerilir.</p>
 
   <h2>9. İletişim</h2>
-  <p>Gizlilikle ilgili sorular ve silme talepleri için: <a href="mailto:ubadicikasd@gmail.com">ubadicikasd@gmail.com</a></p>
+  <p>Gizlilikle ilgili talepler için: <a href="/about.html">iletişim sayfası</a> üzerinden ulaşabilirsin.</p>
 
-  <footer><p><a href="/tr/">Türkçe ana sayfa</a> · <a href="/">OpsPick</a></p></footer>
+  <footer><p><a href="/">OpsPick</a> · <a href="/tr/">Türkçe</a></p></footer>
 </main>
 </body>
 </html>
