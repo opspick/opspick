@@ -2,53 +2,67 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Koru — Gizlilik Politikası | OpsPick</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koru — Gizlilik Politikası</title>
 <meta name="description" content="Koru uygulamasının gizlilik politikası: hangi veriler işlenir, nerede saklanır, nasıl silinir.">
-<link rel="stylesheet" href="/assets/style.css">
+<style>
+  :root { color-scheme: light; }
+  body { margin:0; font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:#17202a; background:#fff; }
+  main { max-width:760px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:32px; line-height:1.2; margin:0 0 8px; }
+  h2 { font-size:20px; margin:36px 0 10px; }
+  p, li { color:#2c3e50; }
+  .meta { color:#6b7a8c; font-size:14px; margin-bottom:32px; }
+  ul { padding-left:22px; }
+  code { background:#f2f5f8; padding:2px 6px; border-radius:4px; font-size:14px; }
+  a { color:#1565c0; }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid #e6ebf0; color:#6b7a8c; font-size:14px; }
+</style>
 </head>
 <body>
-<header class="site"><div class="wrap">
-  <a class="brand" href="/">OpsPick</a>
-  <nav><a href="/tr/">Türkçe</a><a href="/">English</a></nav>
-</div></header>
-<main class="wrap article">
-  <p class="tag">Koru · Gizlilik</p>
-  <h1>Koru Gizlilik Politikası</h1>
-  <p class="lede">Son güncelleme: 2 Kasım 2026. Bu politika, Koru mobil uygulamasının hangi verileri işlediğini ve senin neyi kontrol edebildiğini açıklar.</p>
+<main>
+<h1>Koru — Gizlilik Politikası</h1>
+<p class="meta">Son güncelleme: 15 Kasım 2026 · Uygulama: Koru (com.koru.koru)</p>
 
-  <h2>1. Hangi veriler işlenir</h2>
-  <ul>
-    <li><strong>Hesap bilgileri:</strong> e-posta adresi ve şifre özeti (hash). Şifrenin kendisi saklanmaz.</li>
-    <li><strong>Uygulama içi notlar:</strong> tetikleyici notları ve isteğe bağlı günlük kontrol kayıtları.</li>
-    <li><strong>Teknik veriler:</strong> uygulama sürümü ve engelli liste sürümü. Hata ayıklama için sınırlı teknik loglar.</li>
-  </ul>
+<p>Koru, kumar ve bahis sitelerine erişimi azaltmayı amaçlayan bir koruma uygulamasıdır. Bu politika, uygulamanın hangi verileri işlediğini ve bu verilerin nerede tutulduğunu açıklar.</p>
 
-  <h2>2. İşlenmeyen veriler</h2>
-  <p>Koru ziyaret ettiğin sitelerin içeriğini okumaz, tarama geçmişini toplamaz, konum, kişi listesi veya reklam kimliği istemez. Reklam ağı ve üçüncü taraf izleme yoktur.</p>
+<h2>1. Toplanan veriler</h2>
+<p>Koru hesap oluşturmanı istemez, seni tanımlayan bir profil oluşturmaz ve reklam kimliği kullanmaz. İşlenen veriler yalnızca cihazında tutulur:</p>
+<ul>
+  <li><strong>Engel listesi tercihleri</strong> — seçtiğin alan adları ve liste sürümü.</li>
+  <li><strong>İyileşme kayıtları</strong> — temiz gün sayısı, tetikleyici notları, günlük kontrol yanıtları.</li>
+  <li><strong>Uygulama ayarları</strong> — hatırlatma saatleri, bekleme süresi gibi tercihler.</li>
+</ul>
+<p>Bu veriler cihazın yerel depolamasında (uygulama verisi) kalır; sunucularımıza gönderilmez.</p>
 
-  <h2>3. DNS filtresi ve veri akışı</h2>
-  <p>Filtre cihazında yerel olarak çalışır. Engelli liste cihaza indirilir ve bütünlük kontrolünden geçirilir. Hangi alan adını çözmeye çalıştığın sunucuya gönderilmez; engelleme kararı cihazda verilir.</p>
+<h2>2. Ağ üzerinden yapılan işlemler</h2>
+<ul>
+  <li><strong>Engel listesi güncellemesi:</strong> Uygulama, engel listesinin yeni sürümünü indirmek için bir dosya sunucusuna bağlanır. Bu istek kimlik bilgisi içermez.</li>
+  <li><strong>Yerel DNS filtresi:</strong> Engel kontrolü cihaz üzerinde çalışır. Ziyaret ettiğin adresler tarafımızca kaydedilmez veya iletilmez.</li>
+</ul>
 
-  <h2>4. Sunucuda saklananlar</h2>
-  <p>Hesap e-postası, şifre özeti ve uygulama içi notlar; veritabanında şifreli bağlantı üzerinden erişilen bir PostgreSQL sunucusunda tutulur. Yedekler şifrelenir.</p>
+<h2>3. Üçüncü taraflar</h2>
+<p>Koru reklam ağı, analitik SDK'sı veya sosyal medya izleyicisi içermez. Verilerin hiçbiri üçüncü taraflarla paylaşılmaz veya satılmaz.</p>
 
-  <h2>5. Saklama süresi ve silme</h2>
-  <p>Hesabını uygulama içinden silebilirsin. Silme talebinde hesap verileri ve notlar en geç 30 gün içinde kalıcı olarak silinir. Yasal saklama yükümlülüğü olan kayıtlar (varsa) bu sürenin dışındadır.</p>
+<h2>4. İzinler</h2>
+<p>Uygulama yalnızca işlevi için gereken izinleri ister. Bildirim izni hatırlatmalar için, ağ erişimi engel listesi güncellemesi için kullanılır. Konum, kişiler, kamera veya mikrofon erişimi istenmez.</p>
 
-  <h2>6. Paylaşım</h2>
-  <p>Verilerin üçüncü kişilerle satılmaz, reklam amacıyla paylaşılmaz. Yalnızca yasal bir talep karşısında, talep edilen kapsamla sınırlı olarak paylaşılabilir.</p>
+<h2>5. Verilerin silinmesi</h2>
+<p>Tüm veriler cihazında olduğu için uygulamayı kaldırdığında veya uygulama içindeki "verileri temizle" seçeneğini kullandığında kalıcı olarak silinir. Ayrı bir silme talebi göndermene gerek yoktur.</p>
 
-  <h2>7. Çocuklar</h2>
-  <p>Koru 18 yaş ve üzeri kullanıcılar için tasarlanmıştır. 18 yaş altı kullanıcılardan bilerek veri toplanmaz.</p>
+<h2>6. Çocukların gizliliği</h2>
+<p>Koru 18 yaş ve üzeri kullanıcılar için tasarlanmıştır. Bilerek 18 yaş altı kullanıcılardan veri toplanmaz.</p>
 
-  <h2>8. Sağlık uyarısı</h2>
-  <p>Koru bir tıbbi tedavi veya terapi hizmeti değildir. Kumar bağımlılığı ciddi bir sağlık sorunudur; destek almak için yerel profesyonel hizmetlere başvurman önerilir.</p>
+<h2>7. Sağlıkla ilgili not</h2>
+<p>Koru tıbbi bir cihaz değildir, tanı veya tedavi sunmaz. Kumar bağımlılığı ciddi bir sağlık sorunudur; destek için yerel profesyonel hizmetlere başvurmanı öneririz.</p>
 
-  <h2>9. İletişim</h2>
-  <p>Gizlilikle ilgili talepler için: <a href="/about.html">iletişim sayfası</a> üzerinden ulaşabilirsin.</p>
+<h2>8. Değişiklikler</h2>
+<p>Bu politika güncellenirse bu sayfada yayımlanır ve "son güncelleme" tarihi değişir.</p>
 
-  <footer><p><a href="/">OpsPick</a> · <a href="/tr/">Türkçe</a></p></footer>
+<h2>9. İletişim</h2>
+<p>Sorular için: <a href="mailto:ubadicikasd@gmail.com">ubadicikasd@gmail.com</a></p>
+
+<footer>Koru · com.koru.koru · Bu sayfa Google Play gizlilik politikası gereksinimi için yayımlanmıştır.</footer>
 </main>
 </body>
 </html>
